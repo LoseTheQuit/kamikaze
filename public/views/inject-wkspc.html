@@ -52,7 +52,8 @@
 
         function getData() {
 
-            $.get("https://kamikazi-api.herokuapp.com/views/on-ramp.html", function (data) {
+            //  $.get("https://kamikazi-api.herokuapp.com/views/on-ramp.html", function (data) {
+            $.get("https://kamikazi-api.herokuapp.com/nthrive", function (data) {
                 $(".nThrive-inject").html(data);
             });
         }
