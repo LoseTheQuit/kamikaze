@@ -27,32 +27,9 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-
-//var _ = reqiure('underscore');
-//
-//function allowCrossDomain(req, res, next) {
-//    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-//
-//    var origin = req.headers.origin;
-//    if (_.contains(app.get('allowed_origins'), origin)) {
-//        res.setHeader('Access-Control-Allow-Origin', origin);
-//    }
-//
-//    if (req.method === 'OPTIONS') {
-//        res.send(200);
-//    } else {
-//        next();
-//    }
-//}
-//
-//app.configure(function () {
-//    app.use(express.logger());
-//    app.use(express.bodyParser());
-//    app.use(allowCrossDomain);
-//});
-
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
