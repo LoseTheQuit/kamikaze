@@ -28,24 +28,27 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-// Add headers
-app.use(function (req, res, next) {
+var _ = reqiure('underscore');
 
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://medassets.com');
+function allowCrossDomain(req, res, next) {
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
 
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    var origin = req.headers.origin;
+    if (_.contains(app.get('allowed_origins'), origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
 
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    if (req.method === 'OPTIONS') {
+        res.send(200);
+    } else {
+        next();
+    }
+}
 
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware
-    next();
+app.configure(function () {
+    app.use(express.logger());
+    app.use(express.bodyParser());
+    app.use(allowCrossDomain);
 });
 
 app.set('port', (process.env.PORT || 5000));
