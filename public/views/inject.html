@@ -1,48 +1,3 @@
-<div itemid="https://www.medassets.com/" itemprop="mainEntityOfPage" itemtype="https://schema.org/MedicalWebPage" itemscope="">
-    <meta content="engagement, MedAssets, Med Assets, healthcare performance, revenue cycle management, supply chain, gpo, group purchasing organization, how to improve internal operational efficiency" itemprop="keywords" />
-    <meta content="MedAssets" itemprop="provider" />
-    <meta content="GPO" itemprop="aspect" />
-    <meta content="Group Purchasing Organization" itemprop="aspect" />
-    <meta content="Clinical Operations Consulting" itemprop="aspect" />
-    <meta content="fee-for-service" itemprop="aspect" />
-    <meta content="fee-for-value" itemprop="aspect" />
-    <meta content="Community Hospitals" itemprop="aspect" />
-    <meta content="Supply Chain Spend" itemprop="aspect" />
-    <meta content="Payment Model Pressures" itemprop="aspect" />
-    <meta content="Clinical Integration" itemprop="aspect" />
-    <meta content="Value Based Care" itemprop="aspect" />
-    <meta content="Non Acute Providers" itemprop="aspect" />
-    <meta content="Ambulatory Patient Volume" itemprop="aspect" />
-    <meta content="Procure to Pay" itemprop="aspect" />
-    <meta content="Supply Chain Spend" itemprop="aspect" />
-    <meta content="Hospital Supply Chain" itemprop="aspect" />
-    <meta content="Purchased Services Spend" itemprop="aspect" />
-    <meta content="Strategic Sourcing" itemprop="aspect" />
-    <meta content="Procure to Pay Solutions" itemprop="aspect" />
-    <meta content="Purchased Services" itemprop="aspect" />
-    <meta content="Supply Chain Solutions" itemprop="aspect" />
-    <meta content="Capital &amp; Construction Solutions" itemprop="aspect" />
-    <meta content="Operational Improvement Solutions" itemprop="aspect" />
-    <meta content="Organizational Development Solutions" itemprop="aspect" />
-    <meta content="Revenue Cycle Performance Solutions" itemprop="aspect" />
-    <meta content="Recovery and Collections Solutions" itemprop="aspect" />
-    <meta content="Population Health Solutions" itemprop="aspect" />
-    <meta content="Clinical Delivery Solutions" itemprop="aspect" />
-    <meta content="Claims and Billing Solutions" itemprop="aspect" />
-    <meta content="Contract and Episode Management Solutions" itemprop="aspect" />
-    <meta content="Patient Access Solutions" itemprop="aspect" />
-    <meta content="Charge, Pricing and Compliance Solutions" itemprop="aspect" />
-    <meta content="Clinical Resource Management" itemprop="aspect" />
-    <meta content="Cost Analytics" itemprop="aspect" />
-    <meta content="Operational Analytics" itemprop="aspect" />
-    <meta content="Clinical Analytics" itemprop="aspect" />
-    <meta content="Revenue Cycle Analytics" itemprop="aspect" />
-    <meta content="Brendan Carr" itemprop="reviewedBy" />
-    <div itemprop="mainContentOfPage">
-        <p>Making sure that your organization has the processes, tools and skills to optimize your revenue cycle performance is a critical imperative for financial performance.&nbsp;Whether your challenge is functional or comprehensive, successful <a href="http://go.medassets.com/Patient-Accounting-System-Integration.html?CO=A-CO-EPIC&amp;LS=Website-MA&amp;LSP=RCM&amp;LSC=A-CO-EPIC&amp;PS=Organic">revenue cycle performance</a>&nbsp;initiatives need to be cost effective and are best when delivered through a single-point of accountability for integrated consulting, technology and services.&nbsp;</p>
-    </div>
-</div>
-
 <p class="nThrive-inject"></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -50,14 +5,14 @@
 <script>
     $(function () {
 
-        function getData() {
+        function tapApi() {
 
-            $.get("https://kamikazi-api.herokuapp.com/views/on-ramp.html", function (data) {
+            $.get("https://kamikazi-api.herokuapp.com/nthrive", function (data) {
                 $(".nThrive-inject").html(data);
             });
         }
 
-        getData();
+        tapApi();
 
     });
 </script>
