@@ -15,7 +15,7 @@ let fs = require('fs'),
 
 var client = new Client();
 
-app.use(express.static('657'))
+app.use(express.static('public'))
 app.use(cookieParser());
 
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
